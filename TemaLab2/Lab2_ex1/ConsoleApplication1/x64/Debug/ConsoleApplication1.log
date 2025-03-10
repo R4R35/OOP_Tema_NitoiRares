@@ -1,0 +1,6 @@
+﻿  main.cpp
+main.obj : error LNK2019: unresolved external symbol "public: void __cdecl NumberList::Init(void)" (?Init@NumberList@@QEAAXXZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: bool __cdecl NumberList::Add(int)" (?Add@NumberList@@QEAA_NH@Z) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: void __cdecl NumberList::Sort(void)" (?Sort@NumberList@@QEAAXXZ) referenced in function main
+main.obj : error LNK2019: unresolved external symbol "public: void __cdecl NumberList::Print(void)" (?Print@NumberList@@QEAAXXZ) referenced in function main
+C:\Users\nitoi\Desktop\TemaOOP\TemaLab2\Lab2_ex1\x64\Debug\ConsoleApplication1.exe : fatal error LNK1120: 4 unresolved externals
