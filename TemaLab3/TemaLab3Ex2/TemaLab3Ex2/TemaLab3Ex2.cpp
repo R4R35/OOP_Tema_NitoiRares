@@ -10,7 +10,7 @@ int main()
 	TABLOU.DrawRect(11, 6, 34, 32, '*');
 	TABLOU.FillRect(11, 6, 34, 32, '+');
 	TABLOU.SetPoint(40, 50, '.');
-	TABLOU.DrawLine(60, 40, 70, 10, '*');
+    TABLOU.DrawLine(35,35,45,45,'*');
 	TABLOU.Print();
 	TABLOU.Clear();
  

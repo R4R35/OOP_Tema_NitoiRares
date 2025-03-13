@@ -59,9 +59,12 @@ void Canvas::FillCircle(int x, int y, int ray, char ch) {
 	
 }
 void Canvas::DrawLine(int x1, int y1, int x2, int y2, char ch) {
-	
-	bool vertical = abs(y2 - y1) > abs(x2 - x1);
-	
+
+	bool vertical = false;
+	if (x1 == x2) {
+		vertical = true;
+	}
+
 	if (vertical) {
 		swap(x1, y1);
 		swap(x2, y2);
@@ -72,10 +75,11 @@ void Canvas::DrawLine(int x1, int y1, int x2, int y2, char ch) {
 	}
 	int dx = x2 - x1;
 	int dy = abs(y2 - y1);
-	int error = dx/ 2;
+
+	int error = dx / 2;
 	int sensy = (y1 < y2) ? 1 : -1;
 	int y = y1;
-	
+
 	for (int x = x1;x <= x2;x++) {
 		if (vertical) {
 			if (y >= 0 && y < inaltime && x >= 0 && x < latime) {
@@ -86,6 +90,12 @@ void Canvas::DrawLine(int x1, int y1, int x2, int y2, char ch) {
 			if (x >= 0 && x < inaltime && y >= 0 && y < latime) {
 				array[y][x] = ch;
 			}
+		}
+
+		error -= dy;
+		if (error < 0) {
+			y += sensy;
+			error += dx;
 		}
 	}
 }
